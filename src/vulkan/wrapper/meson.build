@@ -103,12 +103,12 @@ vk_printers = custom_target(
 )
 
 
-# adrenotools_subproj = subproject('libadrenotools')
+adrenotools_subproj = subproject('libadrenotools')
 
-#adrenotools_dep = declare_dependency(
-#  include_directories: adrenotools_subproj.get_variable('adrenotools_inc'),
-#  link_with: adrenotools_subproj.get_variable('adrenotools_lib'),
-#)
+adrenotools_dep = declare_dependency(
+  include_directories: adrenotools_subproj.get_variable('adrenotools_inc'),
+  link_with: adrenotools_subproj.get_variable('adrenotools_lib'),
+)
 
 
 wrapper_files = files(
@@ -129,7 +129,7 @@ wrapper_files = files(
 wrapper_deps = [
   idep_vulkan_runtime,
   idep_vulkan_util,
-#  adrenotools_dep,
+  adrenotools_dep,
   idep_vulkan_wsi,
   dep_android,
 ]
