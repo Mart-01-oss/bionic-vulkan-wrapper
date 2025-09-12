@@ -134,8 +134,8 @@ wrapper_deps = [
   dep_android,
 ]
 
-glslang_quiet = []
-glslang_depfile = ['-MD', '-MF', '@DEPFILE@']
+#glslang_quiet = []
+#glslang_depfile = ['-MD', '-MF', '@DEPFILE@']
 
 s3tc = custom_target(
   's3tc.spv.h',
