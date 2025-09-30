@@ -1,0 +1,21 @@
+[binaries]
+c = 'clang'
+cpp = 'clang++'
+ar = 'llvm-ar'
+strip = 'llvm-strip'
+pkg-config = 'pkg-config'
+
+[properties]
+needs_exe_wrapper = true
+
+[built-in options]
+c_args = ['--target=aarch64-linux-android26', '-fstack-protector-strong', '-Oz']
+cpp_args = ['--target=aarch64-linux-android26', '-fstack-protector-strong', '-Oz']
+c_link_args = ['--target=aarch64-linux-android26', '-landroid-shmem']
+cpp_link_args = ['--target=aarch64-linux-android26', '-landroid-shmem']
+
+[host_machine]
+system = 'android'
+cpu_family = 'aarch64'
+cpu = 'aarch64'
+endian = 'little'
